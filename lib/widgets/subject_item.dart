@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-class sbjectItem extends StatelessWidget {
-  const sbjectItem({
-    super.key,
-  });
+import '../screens/subJect_details_screen.dart';
 
+class SubjectItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        print("object");
+        Navigator.of(context).pushNamed(SubjectDetailsScreen.routeName);
       },
       child: SizedBox(
         height: 160,

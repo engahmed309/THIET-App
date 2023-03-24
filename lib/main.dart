@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thiet_v2/screens/eLearning_screen.dart';
 import 'package:thiet_v2/screens/login_screen.dart';
 import 'package:thiet_v2/screens/new_screen.dart';
+import 'package:thiet_v2/screens/subJect_details_screen.dart';
 
 import '/screens/home_screen.dart';
 
@@ -47,6 +48,8 @@ class _MyAppState extends State<MyApp> {
         LoginScreen.routeName: (context) => const LoginScreen(),
         HomeScreen.routeName: (context) => const HomeScreen(),
         NewsScreen.routeName: (context) => const NewsScreen(),
+        SubjectDetailsScreen.routeName: (context) =>
+            const SubjectDetailsScreen(),
       },
     );
   }

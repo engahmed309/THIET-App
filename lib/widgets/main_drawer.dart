@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:thiet_v2/screens/eLearning_screen.dart';
 import 'package:thiet_v2/screens/home_screen.dart';
+import 'package:thiet_v2/screens/login_screen.dart';
 import 'package:thiet_v2/widgets/main_drawer_item.dart';
-import 'DrpoDownListItem.dart';
+import 'DropDownListItem.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -74,7 +75,7 @@ class MainDrawer extends StatelessWidget {
                   ),
                   icon: Icons.school_rounded),
 
-              DrpoDownListItem(),
+              DropDownListItem(),
               SizedBox(
                 height: 150,
               ),
@@ -92,7 +93,9 @@ class MainDrawer extends StatelessWidget {
                   ),
                   icon: Icons.settings),
               MainDrawerItem(
-                  handler: () {},
+                  handler: () {
+                    Navigator.pushNamed(context, LoginScreen.routeName);
+                  },
                   iconColor: Colors.red,
                   textWidget: Text(
                     "تسجيل الخروج",

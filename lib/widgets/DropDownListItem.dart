@@ -1,12 +1,12 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-class DrpoDownListItem extends StatefulWidget {
+class DropDownListItem extends StatefulWidget {
   @override
-  State<DrpoDownListItem> createState() => _DrpoDownListItemState();
+  State<DropDownListItem> createState() => _DropDownListItemState();
 }
 
-class _DrpoDownListItemState extends State<DrpoDownListItem> {
+class _DropDownListItemState extends State<DropDownListItem> {
   List<String> menuItems = [
     "الجداول الدراسيه",
     "نتائج الطلاب",

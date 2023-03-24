@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:thiet_v2/widgets/main_drawer.dart';
-
 import '../widgets/subject_item.dart';
 
 class ELearningScreen extends StatelessWidget {
@@ -21,13 +20,55 @@ class ELearningScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset(
-              "assets/images/learning.jpg",
-              width: double.infinity,
-              height: 200,
-              fit: BoxFit.cover,
+            Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                Image.asset(
+                  "assets/images/learning.jpg",
+                  width: double.infinity,
+                  height: 200,
+                  fit: BoxFit.cover,
+                ),
+                Container(
+                  decoration:
+                      BoxDecoration(color: Colors.black.withOpacity(.5)),
+                  child: Text(
+                    "المواد الدراسيه",
+                    style: Theme.of(context).textTheme.headline1,
+                  ),
+                )
+              ],
             ),
-            sbjectItem(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SubjectItem(),
+                SizedBox(
+                  width: 10,
+                ),
+                SubjectItem()
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SubjectItem(),
+                SizedBox(
+                  width: 10,
+                ),
+                SubjectItem()
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SubjectItem(),
+                SizedBox(
+                  width: 10,
+                ),
+                SubjectItem()
+              ],
+            ),
           ],
         ),
       ),
