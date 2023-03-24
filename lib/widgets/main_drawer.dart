@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thiet_v2/screens/eLearning_screen.dart';
 import 'package:thiet_v2/screens/home_screen.dart';
 import 'package:thiet_v2/widgets/main_drawer_item.dart';
 import 'DrpoDownListItem.dart';
@@ -61,10 +62,11 @@ class MainDrawer extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline1,
                 ),
               ),
-              
 
               MainDrawerItem(
-                  handler: () {},
+                  handler: () {
+                    Navigator.of(context).pushNamed(ELearningScreen.routeName);
+                  },
                   iconColor: Colors.white,
                   textWidget: Text(
                     "منصة التعليم",

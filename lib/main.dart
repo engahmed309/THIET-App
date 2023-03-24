@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thiet_v2/screens/eLearning_screen.dart';
 import 'package:thiet_v2/screens/login_screen.dart';
 import 'package:thiet_v2/screens/new_screen.dart';
 
@@ -20,6 +21,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        appBarTheme: AppBarTheme(
+            titleTextStyle: Theme.of(context).textTheme.headline1,
+            backgroundColor: Color.fromRGBO(46, 97, 124, 70),
+            centerTitle: true),
         fontFamily: "ElMessiri",
         textTheme: ThemeData.light().textTheme.copyWith(
               headline1: const TextStyle(
@@ -38,6 +43,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: LoginScreen(),
       routes: {
+        ELearningScreen.routeName: (context) => const ELearningScreen(),
         LoginScreen.routeName: (context) => const LoginScreen(),
         HomeScreen.routeName: (context) => const HomeScreen(),
         NewsScreen.routeName: (context) => const NewsScreen(),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:thiet_v2/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -99,31 +98,32 @@ class _LoginScreenState extends State<LoginScreen> {
           //   // ),
           // ),
           //LOGIN BUTTON
-          Container(
-            child: MaterialButton(
-              hoverColor: Colors.cyan,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
-              padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-              color: Theme.of(context).primaryColor,
-              onPressed: () {
-                Navigator.of(context).pushReplacementNamed(
-                  HomeScreen.routeName,
-                );
-                // AwesomeDialog(
-                //         title: "! مرحبا ",
-                //         context: context,
-                //         dialogType: DialogType.success,
-                //         animType: AnimType.rightSlide,
-                //         desc: 'تم تسجيل الدخول بنجاح',
-                //         btnOkOnPress: () {},
-                //         width: 1800)
-                // .show();
-              },
-              child: Text(
-                " تسجيل الدخول ",
-                style: Theme.of(context).textTheme.headline1,
-              ),
+          SizedBox(
+            height: 10,
+          ),
+          MaterialButton(
+            hoverColor: Colors.cyan,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
+            color: Theme.of(context).primaryColor,
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed(
+                HomeScreen.routeName,
+              );
+              // AwesomeDialog(
+              //         title: "! مرحبا ",
+              //         context: context,
+              //         dialogType: DialogType.success,
+              //         animType: AnimType.rightSlide,
+              //         desc: 'تم تسجيل الدخول بنجاح',
+              //         btnOkOnPress: () {},
+              //         width: 1800)
+              // .show();
+            },
+            child: Text(
+              " تسجيل الدخول ",
+              style: Theme.of(context).textTheme.headline1,
             ),
           ),
         ],
