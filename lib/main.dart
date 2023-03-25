@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:thiet_v2/screens/eLearning_screen.dart';
 import 'package:thiet_v2/screens/login_screen.dart';
 import 'package:thiet_v2/screens/new_screen.dart';
+import 'package:thiet_v2/screens/student_info_screen.dart';
 import 'package:thiet_v2/screens/subJect_details_screen.dart';
+import 'package:thiet_v2/screens/subject_table_screen.dart';
+import 'package:thiet_v2/screens/test.dart';
 
 import '/screens/home_screen.dart';
 
@@ -34,6 +37,7 @@ class _MyAppState extends State<MyApp> {
                   fontWeight: FontWeight.bold,
                   fontFamily: 'ElMessiri'),
               headline2: const TextStyle(
+                  //decoration: TextDecoration.underline,
                   color: Colors.black,
                   fontSize: 20,
                   // fontWeight: FontWeight.bold,
@@ -44,12 +48,15 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: LoginScreen(),
       routes: {
+        TestScreen.routeName: (context) => const TestScreen(),
         ELearningScreen.routeName: (context) => const ELearningScreen(),
         LoginScreen.routeName: (context) => const LoginScreen(),
         HomeScreen.routeName: (context) => const HomeScreen(),
         NewsScreen.routeName: (context) => const NewsScreen(),
         SubjectDetailsScreen.routeName: (context) =>
             const SubjectDetailsScreen(),
+        SubjectTableScreen.routeName: (context) => const SubjectTableScreen(),
+        StudentInfoScreen.routeName: (context) => const StudentInfoScreen(),
       },
     );
   }

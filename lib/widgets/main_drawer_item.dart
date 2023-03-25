@@ -21,17 +21,15 @@ class MainDrawerItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(bottom: 5),
         child: Container(
+            margin: EdgeInsets.only(right: 10, left: 10),
             width: double.infinity,
             height: 70,
             decoration: BoxDecoration(
               color: Theme.of(context).primaryColor,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30),
-                bottomLeft: Radius.circular(30),
-              ),
+              borderRadius: BorderRadius.circular(20),
             ),
             child: Padding(
-              padding: const EdgeInsets.only(right: 10),
+              padding: const EdgeInsets.only(right: 30),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.center,

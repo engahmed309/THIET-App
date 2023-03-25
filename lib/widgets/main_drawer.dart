@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thiet_v2/screens/eLearning_screen.dart';
 import 'package:thiet_v2/screens/home_screen.dart';
 import 'package:thiet_v2/screens/login_screen.dart';
+import 'package:thiet_v2/screens/student_info_screen.dart';
 import 'package:thiet_v2/widgets/main_drawer_item.dart';
 import 'DropDownListItem.dart';
 
@@ -30,11 +31,14 @@ class MainDrawer extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Icon(
-                      Icons.person,
-                      color: Colors.white,
-                      size: 50,
-                    ),
+                    IconButton(
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushNamed(StudentInfoScreen.routeName);
+                        },
+                        icon: Icon(
+                          Icons.person,
+                        )),
                     Text(
                       "مازن محمد نبيل",
                       style: Theme.of(context).textTheme.headline1,

@@ -1,5 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:thiet_v2/screens/test.dart';
+
+import '../screens/Subject_Table_screen.dart';
 
 class DropDownListItem extends StatefulWidget {
   @override
@@ -17,10 +20,12 @@ class _DropDownListItemState extends State<DropDownListItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(top: 10),
+      // height: 70,
+      margin: EdgeInsets.only(right: 10, left: 10),
       decoration: BoxDecoration(
           color: Theme.of(context).primaryColor,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20), bottomLeft: Radius.circular(20))),
+          borderRadius: BorderRadius.circular(20)),
       child: Column(
         children: [
           ListTile(
@@ -49,7 +54,19 @@ class _DropDownListItemState extends State<DropDownListItem> {
               child: ListView(
                 children: menuItems
                     .map((item) => InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                print(item);
+                                if (item == "الجداول الدراسيه") {
+                                  Navigator.of(context)
+                                      .pushNamed(SubjectTableScreen.routeName);
+                                } else if (item == "نتائج الطلاب") {
+                                  Navigator.of(context)
+                                      .pushNamed(TestScreen.routeName);
+                                } else {
+                                  Navigator.of(context)
+                                      .pushNamed(TestScreen.routeName);
+                                }
+                              },
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
