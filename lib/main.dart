@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thiet_v2/screens/eLearning_screen.dart';
 import 'package:thiet_v2/screens/login_screen.dart';
 import 'package:thiet_v2/screens/new_screen.dart';
+import 'package:thiet_v2/screens/news_details_sscreen.dart';
 import 'package:thiet_v2/screens/student_info_screen.dart';
 import 'package:thiet_v2/screens/subJect_details_screen.dart';
 import 'package:thiet_v2/screens/subject_table_screen.dart';
@@ -39,6 +40,7 @@ class _MyAppState extends State<MyApp> {
               headline2: const TextStyle(
                   //decoration: TextDecoration.underline,
                   color: Colors.black,
+                  fontWeight: FontWeight.bold,
                   fontSize: 20,
                   // fontWeight: FontWeight.bold,
                   fontFamily: 'ElMessiri'),
@@ -57,6 +59,7 @@ class _MyAppState extends State<MyApp> {
             const SubjectDetailsScreen(),
         SubjectTableScreen.routeName: (context) => const SubjectTableScreen(),
         StudentInfoScreen.routeName: (context) => const StudentInfoScreen(),
+        NewsDetailsScreen.routeName: (context) => NewsDetailsScreen(),
       },
     );
   }
